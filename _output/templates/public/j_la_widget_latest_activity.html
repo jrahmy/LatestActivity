@@ -1,0 +1,34 @@
+<xf:css src="j_la.less" />
+
+<div class="block block--j-la-widget" {{ widget_data($widget) }}>
+	<div class="block-container">
+		<h3 class="block-minorHeader">
+			<a href="{{ link('whats-new/latest-activity') }}" rel="nofollow">{$title}</a>
+		</h3>
+
+		<xf:if is="$newsFeedItems is not empty">
+			<ul class="block-body">
+				<xf:foreach loop="$newsFeedItems" value="$item">
+					<xf:macro name="feed_row"
+						arg-item="{$item}" />
+				</xf:foreach>
+			</ul>
+		<xf:else />
+			<div class="block-body">
+				<div class="block-row">{{ phrase('news_feed_is_currently_empty') }}</div>
+			</div>
+		</xf:if>
+	</div>
+</div>
+
+<xf:macro name="feed_row"
+	arg-item="!">
+
+	<li class="block-row {{ $xf.visitor.isIgnoring($item.user_id) ? 'is-ignored' : '' }}"
+		data-author="{{ $item.User ? $item.User.username : $item.username }}">
+
+		<xf:macro template="news_feed_macros" name="feed_item"
+			arg-item="{$item}"
+			arg-avatarSize="xxs" />
+	</li>
+</xf:macro>

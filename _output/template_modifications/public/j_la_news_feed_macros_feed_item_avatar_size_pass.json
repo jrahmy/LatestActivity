@@ -1,0 +1,9 @@
+{
+    "template": "news_feed_macros",
+    "description": "Passes the avatar size argument to the avatar tag",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/(<xf:avatar .+ size=\").+(\" .+ \\/>)/isU",
+    "replace": "$1{$avatarSize}$2"
+}

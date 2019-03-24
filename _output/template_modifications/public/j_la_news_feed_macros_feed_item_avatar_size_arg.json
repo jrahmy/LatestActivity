@@ -1,0 +1,9 @@
+{
+    "template": "news_feed_macros",
+    "description": "Adds an avatar size argument to the feed item macro",
+    "execution_order": 10,
+    "enabled": true,
+    "action": "preg_replace",
+    "find": "/(<xf:macro name=\"feed_item\" [^\\/]+)(>)/isU",
+    "replace": "$1 arg-avatarSize=\"s\"$2"
+}
