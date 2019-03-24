@@ -1,0 +1,1 @@
+A block containing a list of items from the latest activity feed.

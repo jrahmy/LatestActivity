@@ -1,0 +1,23 @@
+{
+    "legacy_addon_id": "jrahmy_recentActivity",
+    "title": "Latest Activity",
+    "description": "Adds a latest activity widget for use with the widget system.",
+    "version_id": 1000011,
+    "version_string": "1.0.0 Alpha 1",
+    "dev": "Jeremy P",
+    "dev_url": "https://xenforo.com/community/members/jeremy-p.450/",
+    "faq_url": "",
+    "support_url": "",
+    "extra_urls": [],
+    "require": {
+        "php": [
+            "5.6.0",
+            "PHP 5.6.0+"
+        ],
+        "XF": [
+            "2010010",
+            "XenForo 2.1.0+"
+        ]
+    },
+    "icon": "fa-newspaper"
+}
